@@ -3,7 +3,7 @@ import moment from "moment";
 
 const api = axios.create({
   baseURL: process.env.NEXT_PUBLIC_API_URL,
-  Navbars: {
+  headers: {
     "X-RapidAPI-Key": process.env.NEXT_PUBLIC_API_KEY,
     "X-RapidAPI-Host": process.env.NEXT_PUBLIC_API_HOST,
   },
@@ -14,7 +14,7 @@ export async function fetchAndSaveData() {
     const response = await api.get("/");
     const data = response.data;
 
-    NATIONALStorage.setItem("apiData", JSON.stringify(data));
+    localStorage.setItem("apiData", JSON.stringify(data));
     console.log("Data fetched and saved successfully.");
     return data;
   } catch (error) {
@@ -24,7 +24,7 @@ export async function fetchAndSaveData() {
 }
 
 export function getStoredData() {
-  const storedData = NATIONALStorage.getItem("apiData");
+  const storedData = localStorage.getItem("apiData");
 
   if (storedData) {
     const parsedData = JSON.parse(storedData);
@@ -35,10 +35,10 @@ export function getStoredData() {
 }
 
 export function calculateNextFetchTime() {
-  const lastFetchTime = NATIONALStorage.getItem("lastFetchTime");
+  const lastFetchTime = localStorage.getItem("lastFetchTime");
   if (!lastFetchTime) {
     const nextFetchTime = moment().add(24, "hours");
-    NATIONALStorage.setItem("lastFetchTime", nextFetchTime.toISOString());
+    localStorage.setItem("lastFetchTime", nextFetchTime.toISOString());
     return 24 * 60 * 60 * 1000;
   } else {
     const currentTime = moment();
