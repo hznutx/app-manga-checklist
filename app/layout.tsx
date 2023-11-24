@@ -6,9 +6,9 @@ import { Footer, Navbar } from "@/components";
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Manga Checklist',
-  description: 'check imdb ranking movie and top almost recommened now',
-}
+  title: "Manga Checklist",
+  description: "All Webtoon tracking completely read with checklist and tag",
+};
 
 export default function RootLayout({
   children,
