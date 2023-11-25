@@ -25,7 +25,7 @@ const Library = () => {
   }, [DataWebtoon]);
 
   const searchWebtoon = uniqueTitlesData.filter((story) => {
-    return story.title.includes(searchInput.toLowerCase().replace(/\s+/g, ""));
+    return story.title.includes(searchInput.replace(/\s+/g, ""));
   });
 
   const isDataEmpty =
