@@ -6,7 +6,7 @@ export default function Page() {
     <div className="w-full min-h-screen bg-slate-50 flex">
       <div className="w-full justify-center flex-col">
         {/* <Hero /> */}
-        <div className="mb-14 container mx-auto px-8 max-w-7xl flex-col">
+        <div className="mb-14 container mx-auto max-w-7xl flex-col">
           <Library />
         </div>
       </div>
