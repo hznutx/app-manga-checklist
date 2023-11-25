@@ -36,11 +36,11 @@ const WebtoonCard = () => {
   }, []);
   
   return (
-    <div className="py-40 flex min-h-screen items-center justify-center">
+    <div className="py-40 container">
       <span className="text-lg font-bold p-10 grid text-gray-950">
         ทั้งหมด {uniqueTitlesData.length.toLocaleString()} เรื่อง
       </span>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 ">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8  min-h-screen items-center justify-center">
         {uniqueTitlesData.map((story, i) => (
           <div className="mx-auto px-5" key={i}>
             <div className="w-[320px] cursor-pointer rounded-lg bg-white p-2 shadow duration-150 hover:scale-105 hover:shadow-md">
