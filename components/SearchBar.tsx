@@ -4,7 +4,7 @@ import { FilterSearchInput } from "@/types";
 import { IconImg } from "./ImageSet";
 import { useState } from "react";
 
-const SearchBar = ({ onClick, keyword, onChange }: FilterSearchInput) => {
+const SearchBar = ({ keyword, onChange }: FilterSearchInput) => {
    const [openDropDown, setOpenDropDown] = useState(false);
 
    const handlePopup = () => {
