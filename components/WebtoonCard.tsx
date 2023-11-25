@@ -34,7 +34,7 @@ const WebtoonCard = ({story}:{story?:any}) => {
 
                       <div className="my-3 flex items-center justify-between px-4">
                         <p className="text-sm font-semibold text-gray-500">
-                          Total Chapter
+                          Total Chapter (free)
                         </p>
                         <p className="rounded-full bg-gray-200 px-2 py-0.5 text-xs font-semibold text-gray-600">
                           {story?.totalServiceEpisodeCount}
