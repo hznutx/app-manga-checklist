@@ -22,7 +22,7 @@ const SearchBar = ({ keyword, onChange }: FilterSearchInput) => {
           onChange={(e: any) => {
             onChange(e.target.value);
           }}
-          className="w-full bg-[#0d1829] flex bg-transparent pl-2 text-[#cccccc] focus:border-none focus:outline-0 outline-0"
+          className="w-full bg-[#0d1829] flex bg-transparent pl-2 text-[#cccccc] focus:border-none focus:outline-none outline-0"
           placeholder="Search name webtoon or manga "
         />
         <button
